@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Problem Image Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/manage.css') }}">
+  </head>
+  <body>
+    <main class="manage-shell">
+      <header class="manage-header">
+        <div>
+          <p class="eyebrow">Local developer tool</p>
+          <h1>Problem Image Manager</h1>
+          <p>Review the exact published images and apply durable manual replacements.</p>
+        </div>
+        <a href="{{ url_for('main.index') }}">Open public trainer</a>
+      </header>
+
+      <section class="manager-panel browser-panel" aria-labelledby="browser-heading">
+        <h2 id="browser-heading">Problem browser</h2>
+        <div class="browser-controls">
+          <label>Status
+            <select id="status-filter">
+              <option value="all">All</option>
+              <option value="not_reviewed">Not Reviewed</option>
+              <option value="looks_good">Looks Good</option>
+              <option value="bad_crop">Bad Crop</option>
+              <option value="manually_replaced">Manually Replaced</option>
+              <option value="suspicious">Suspicious</option>
+            </select>
+          </label>
+          <label>Year <select id="year-select"></select></label>
+          <label>Exam/version <select id="exam-select-manage"></select></label>
+          <label>Problem <select id="problem-select"></select></label>
+        </div>
+        <div class="navigation-row">
+          <button id="previous-problem" type="button">Previous</button>
+          <button id="next-problem" type="button">Next</button>
+          <span id="problem-count"></span>
+        </div>
+      </section>
+
+      <p id="manager-message" class="manager-message" role="status" aria-live="polite">Loading…</p>
+
+      <div id="problem-manager" hidden>
+        <section class="manager-panel problem-summary">
+          <div>
+            <h2 id="managed-problem-heading"></h2>
+            <p id="managed-problem-id"></p>
+          </div>
+          <div class="status-actions">
+            <span id="review-status" class="status-badge"></span>
+            <button id="mark-good" type="button">Looks Good</button>
+            <button id="mark-bad" class="danger-button" type="button">Bad Crop</button>
+          </div>
+        </section>
+
+        <section class="manager-panel">
+          <h2>User-view preview</h2>
+          <p class="hint">This uses the same problem and choice image classes as the public trainer.</p>
+          <div class="problem-card public-preview">
+            <p id="preview-meta" class="problem-meta"></p>
+            <div id="preview-questions" class="question-images"></div>
+            <div id="preview-choices" class="preview-choices"></div>
+          </div>
+        </section>
+
+        <section class="manager-panel">
+          <h2>Individual images</h2>
+          <p class="hint">Select a file to preview it locally. Nothing changes until you choose “Save replacement.”</p>
+          <div id="image-slots" class="image-slot-list"></div>
+        </section>
+
+        <section class="manager-panel metadata-grid">
+          <div>
+            <h2>Answer and source</h2>
+            <p><strong>Correct answer:</strong> <span id="correct-answer"></span></p>
+            <div id="source-information"></div>
+          </div>
+          <div>
+            <h2>Importer warnings</h2>
+            <ul id="importer-warnings"></ul>
+            <h2>Automatic crop warnings</h2>
+            <ul id="quality-warnings"></ul>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="{{ url_for('static', filename='js/manage.js') }}"></script>
+  </body>
+</html>

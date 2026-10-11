@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Imported Problem Review</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/review.css') }}">
+  </head>
+  <body>
+    <main class="review-shell">
+      <header>
+        <div>
+          <h1>Imported Problem Review</h1>
+          <p>This local tool edits the generated draft, not the live sample database.</p>
+        </div>
+        <a href="{{ url_for('main.index') }}">Open trainer</a>
+      </header>
+
+      <nav class="problem-navigation" aria-label="Problem navigation">
+        <button id="previous-problem" type="button">Previous</button>
+        <select id="problem-picker" aria-label="Choose a problem"></select>
+        <button id="next-problem" type="button">Next</button>
+        <span id="review-counts"></span>
+      </nav>
+
+      <p id="page-message" class="message" role="status" aria-live="polite">Loading…</p>
+
+      <form id="review-form" hidden>
+        <section class="panel metadata-panel">
+          <div>
+            <h2 id="problem-heading"></h2>
+            <p id="record-status"></p>
+          </div>
+          <div id="source-links" class="source-links"></div>
+        </section>
+
+        <section class="panel">
+          <label for="question-text"><strong>Extracted question</strong></label>
+          <textarea id="question-text" rows="12" required></textarea>
+          <div id="stem-diagrams" class="image-grid"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Answer choices</h2>
+          <div id="choice-editors"></div>
+        </section>
+
+        <section class="panel two-columns">
+          <fieldset>
+            <legend>Correct answer</legend>
+            <div id="answer-editors" class="answer-editors"></div>
+            <p class="hint">More than one answer may be correct.</p>
+          </fieldset>
+
+          <div>
+            <label for="diagram-status"><strong>Diagram/image review</strong></label>
+            <select id="diagram-status">
+              <option value="not_reviewed">Not reviewed</option>
+              <option value="ok">Looks correct</option>
+              <option value="bad">Bad diagram/crop</option>
+              <option value="missing">Diagram is missing</option>
+              <option value="not_applicable">No diagram needed</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Parsing warnings</h2>
+          <ul id="parsing-warnings"></ul>
+        </section>
+
+        <div class="actions">
+          <button id="save-problem" type="submit">Save changes</button>
+          <button id="verify-problem" class="verify-button" type="button">Mark Verified</button>
+          <button id="unlock-problem" class="warning-button" type="button" hidden>
+            Unlock verified record for editing
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/review.js') }}"></script>
+  </body>
+</html>

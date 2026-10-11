@@ -1,0 +1,40 @@
+# Python environments and generated caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+instance/
+
+# Packaging output
+build/
+dist/
+*.egg-info/
+
+# Editors, operating systems, and temporary files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+*.bak
+*.log
+*.tmp
+
+# Developer-only local review state and uploaded replacements
+data/problem_image_overrides.json
+app/static/problem_images/manual/
+
+# Private/imported exam materials must never enter the public repository
+source_pdfs/
+data/generated/
+app/static/problem_images/historical/
+app/static/problem_images/trainer/

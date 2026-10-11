@@ -1,0 +1,188 @@
+.manage-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 32px auto 64px;
+}
+
+.manage-header,
+.problem-summary,
+.status-actions,
+.navigation-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.manager-panel {
+  margin: 18px 0;
+  padding: 22px;
+  border: 1px solid #ccd4df;
+  border-radius: 10px;
+  background: white;
+}
+
+.manager-panel h2 {
+  margin-top: 0;
+}
+
+.browser-controls {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.browser-controls label {
+  font-weight: 700;
+}
+
+.browser-controls select {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #bac4d3;
+  border-radius: 6px;
+  background: white;
+  font: inherit;
+}
+
+.navigation-row {
+  justify-content: flex-start;
+  margin-top: 16px;
+}
+
+.status-badge,
+.origin-badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #e6ebf2;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.origin-badge.manual {
+  color: #075c35;
+  background: #d9f5e5;
+}
+
+.danger-button {
+  border-color: #a51d18;
+  background: #a51d18;
+}
+
+.public-preview {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.preview-choices {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.preview-choices .choice {
+  cursor: default;
+}
+
+.image-slot-list {
+  display: grid;
+  gap: 18px;
+}
+
+.image-slot {
+  padding: 16px;
+  border: 1px solid #d7dde6;
+  border-radius: 8px;
+}
+
+.image-slot-header,
+.image-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.image-slot-header {
+  justify-content: space-between;
+}
+
+.image-slot-preview {
+  display: block;
+  max-width: 100%;
+  max-height: 520px;
+  margin: 14px 0;
+  border: 1px solid #d7dde6;
+  object-fit: contain;
+}
+
+.pending-preview {
+  padding: 12px;
+  border: 2px dashed #2d65ad;
+  background: #f4f8ff;
+}
+
+.pending-preview[hidden] {
+  display: none;
+}
+
+.image-actions input[type="file"] {
+  max-width: 100%;
+}
+
+.metadata-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.source-line {
+  margin: 8px 0;
+}
+
+.manager-message {
+  min-height: 24px;
+  color: #52617a;
+  font-weight: 700;
+}
+
+.manager-message.error {
+  color: #a51d18;
+}
+
+.manager-message.success {
+  color: #18743b;
+}
+
+.hint {
+  color: #52617a;
+}
+
+.image-quality {
+  margin: 8px 0;
+  color: #52617a;
+  font-size: 0.9rem;
+}
+
+.image-quality.warning {
+  color: #8a4b08;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .browser-controls,
+  .metadata-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .manage-header,
+  .problem-summary,
+  .status-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

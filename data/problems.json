@@ -1,0 +1,561 @@
+{
+  "schema_version": 2,
+  "collection": {
+    "kind": "original_public_demo",
+    "notice": "Contains original demonstration questions only."
+  },
+  "problems": [
+    {
+      "id": "demo-a-01",
+      "year": 2099,
+      "exam_version": "Demo A",
+      "problem_number": 1,
+      "question": "A bicycle starts from rest and accelerates uniformly at 2 m/s^2 for 4 s. What is its final speed?",
+      "question_images": [
+        {
+          "path": "problem_images/demo/demo-a-01-question.png",
+          "alt_text": "A bicycle starts from rest and accelerates uniformly at 2 m/s^2 for 4 s. What is its final speed?"
+        }
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "2 m/s",
+          "image": {
+            "path": "problem_images/demo/demo-a-01-choice-a.png",
+            "alt_text": "Choice A: 2 m/s"
+          }
+        },
+        {
+          "label": "B",
+          "text": "4 m/s",
+          "image": {
+            "path": "problem_images/demo/demo-a-01-choice-b.png",
+            "alt_text": "Choice B: 4 m/s"
+          }
+        },
+        {
+          "label": "C",
+          "text": "6 m/s",
+          "image": {
+            "path": "problem_images/demo/demo-a-01-choice-c.png",
+            "alt_text": "Choice C: 6 m/s"
+          }
+        },
+        {
+          "label": "D",
+          "text": "8 m/s",
+          "image": {
+            "path": "problem_images/demo/demo-a-01-choice-d.png",
+            "alt_text": "Choice D: 8 m/s"
+          }
+        },
+        {
+          "label": "E",
+          "text": "16 m/s",
+          "image": {
+            "path": "problem_images/demo/demo-a-01-choice-e.png",
+            "alt_text": "Choice E: 16 m/s"
+          }
+        }
+      ],
+      "diagrams": [],
+      "correct_answers": [
+        "D"
+      ],
+      "source": {
+        "exam_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "exam_pages": [],
+        "solutions_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "solutions_pages": []
+      },
+      "review_status": "verified",
+      "review_notes": [
+        "Original mechanics question written for the public demonstration."
+      ]
+    },
+    {
+      "id": "demo-a-02",
+      "year": 2099,
+      "exam_version": "Demo A",
+      "problem_number": 2,
+      "question": "A 6 kg crate experiences a constant net horizontal force of 18 N. What is the crate's acceleration?",
+      "question_images": [
+        {
+          "path": "problem_images/demo/demo-a-02-question.png",
+          "alt_text": "A 6 kg crate experiences a constant net horizontal force of 18 N. What is the crate's acceleration?"
+        }
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "0.33 m/s^2",
+          "image": {
+            "path": "problem_images/demo/demo-a-02-choice-a.png",
+            "alt_text": "Choice A: 0.33 m/s^2"
+          }
+        },
+        {
+          "label": "B",
+          "text": "3 m/s^2",
+          "image": {
+            "path": "problem_images/demo/demo-a-02-choice-b.png",
+            "alt_text": "Choice B: 3 m/s^2"
+          }
+        },
+        {
+          "label": "C",
+          "text": "6 m/s^2",
+          "image": {
+            "path": "problem_images/demo/demo-a-02-choice-c.png",
+            "alt_text": "Choice C: 6 m/s^2"
+          }
+        },
+        {
+          "label": "D",
+          "text": "12 m/s^2",
+          "image": {
+            "path": "problem_images/demo/demo-a-02-choice-d.png",
+            "alt_text": "Choice D: 12 m/s^2"
+          }
+        },
+        {
+          "label": "E",
+          "text": "108 m/s^2",
+          "image": {
+            "path": "problem_images/demo/demo-a-02-choice-e.png",
+            "alt_text": "Choice E: 108 m/s^2"
+          }
+        }
+      ],
+      "diagrams": [],
+      "correct_answers": [
+        "B"
+      ],
+      "source": {
+        "exam_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "exam_pages": [],
+        "solutions_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "solutions_pages": []
+      },
+      "review_status": "verified",
+      "review_notes": [
+        "Original mechanics question written for the public demonstration."
+      ]
+    },
+    {
+      "id": "demo-a-03",
+      "year": 2099,
+      "exam_version": "Demo A",
+      "problem_number": 3,
+      "question": "A runner moves in a straight line at a constant speed of 5 m/s for 12 s. How far does the runner travel?",
+      "question_images": [
+        {
+          "path": "problem_images/demo/demo-a-03-question.png",
+          "alt_text": "A runner moves in a straight line at a constant speed of 5 m/s for 12 s. How far does the runner travel?"
+        }
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "17 m",
+          "image": {
+            "path": "problem_images/demo/demo-a-03-choice-a.png",
+            "alt_text": "Choice A: 17 m"
+          }
+        },
+        {
+          "label": "B",
+          "text": "50 m",
+          "image": {
+            "path": "problem_images/demo/demo-a-03-choice-b.png",
+            "alt_text": "Choice B: 50 m"
+          }
+        },
+        {
+          "label": "C",
+          "text": "60 m",
+          "image": {
+            "path": "problem_images/demo/demo-a-03-choice-c.png",
+            "alt_text": "Choice C: 60 m"
+          }
+        },
+        {
+          "label": "D",
+          "text": "72 m",
+          "image": {
+            "path": "problem_images/demo/demo-a-03-choice-d.png",
+            "alt_text": "Choice D: 72 m"
+          }
+        },
+        {
+          "label": "E",
+          "text": "120 m",
+          "image": {
+            "path": "problem_images/demo/demo-a-03-choice-e.png",
+            "alt_text": "Choice E: 120 m"
+          }
+        }
+      ],
+      "diagrams": [],
+      "correct_answers": [
+        "C"
+      ],
+      "source": {
+        "exam_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "exam_pages": [],
+        "solutions_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "solutions_pages": []
+      },
+      "review_status": "verified",
+      "review_notes": [
+        "Original mechanics question written for the public demonstration."
+      ]
+    },
+    {
+      "id": "demo-a-04",
+      "year": 2099,
+      "exam_version": "Demo A",
+      "problem_number": 4,
+      "question": "Near Earth's surface, take g = 10 m/s^2. What is the weight of a 2.5 kg backpack?",
+      "question_images": [
+        {
+          "path": "problem_images/demo/demo-a-04-question.png",
+          "alt_text": "Near Earth's surface, take g = 10 m/s^2. What is the weight of a 2.5 kg backpack?"
+        }
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "0.25 N",
+          "image": {
+            "path": "problem_images/demo/demo-a-04-choice-a.png",
+            "alt_text": "Choice A: 0.25 N"
+          }
+        },
+        {
+          "label": "B",
+          "text": "4 N",
+          "image": {
+            "path": "problem_images/demo/demo-a-04-choice-b.png",
+            "alt_text": "Choice B: 4 N"
+          }
+        },
+        {
+          "label": "C",
+          "text": "12.5 N",
+          "image": {
+            "path": "problem_images/demo/demo-a-04-choice-c.png",
+            "alt_text": "Choice C: 12.5 N"
+          }
+        },
+        {
+          "label": "D",
+          "text": "25 N",
+          "image": {
+            "path": "problem_images/demo/demo-a-04-choice-d.png",
+            "alt_text": "Choice D: 25 N"
+          }
+        },
+        {
+          "label": "E",
+          "text": "250 N",
+          "image": {
+            "path": "problem_images/demo/demo-a-04-choice-e.png",
+            "alt_text": "Choice E: 250 N"
+          }
+        }
+      ],
+      "diagrams": [],
+      "correct_answers": [
+        "D"
+      ],
+      "source": {
+        "exam_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "exam_pages": [],
+        "solutions_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "solutions_pages": []
+      },
+      "review_status": "verified",
+      "review_notes": [
+        "Original mechanics question written for the public demonstration."
+      ]
+    },
+    {
+      "id": "demo-b-01",
+      "year": 2099,
+      "exam_version": "Demo B",
+      "problem_number": 1,
+      "question": "A ball is thrown straight upward at 20 m/s. Ignoring air resistance and taking g = 10 m/s^2, how long does it take to reach its highest point?",
+      "question_images": [
+        {
+          "path": "problem_images/demo/demo-b-01-question.png",
+          "alt_text": "A ball is thrown straight upward at 20 m/s. Ignoring air resistance and taking g = 10 m/s^2, how long does it take to reach its highest point?"
+        }
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "1 s",
+          "image": {
+            "path": "problem_images/demo/demo-b-01-choice-a.png",
+            "alt_text": "Choice A: 1 s"
+          }
+        },
+        {
+          "label": "B",
+          "text": "2 s",
+          "image": {
+            "path": "problem_images/demo/demo-b-01-choice-b.png",
+            "alt_text": "Choice B: 2 s"
+          }
+        },
+        {
+          "label": "C",
+          "text": "4 s",
+          "image": {
+            "path": "problem_images/demo/demo-b-01-choice-c.png",
+            "alt_text": "Choice C: 4 s"
+          }
+        },
+        {
+          "label": "D",
+          "text": "10 s",
+          "image": {
+            "path": "problem_images/demo/demo-b-01-choice-d.png",
+            "alt_text": "Choice D: 10 s"
+          }
+        },
+        {
+          "label": "E",
+          "text": "20 s",
+          "image": {
+            "path": "problem_images/demo/demo-b-01-choice-e.png",
+            "alt_text": "Choice E: 20 s"
+          }
+        }
+      ],
+      "diagrams": [],
+      "correct_answers": [
+        "B"
+      ],
+      "source": {
+        "exam_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "exam_pages": [],
+        "solutions_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "solutions_pages": []
+      },
+      "review_status": "verified",
+      "review_notes": [
+        "Original mechanics question written for the public demonstration."
+      ]
+    },
+    {
+      "id": "demo-b-02",
+      "year": 2099,
+      "exam_version": "Demo B",
+      "problem_number": 2,
+      "question": "A 4 kg cart moves east at 3 m/s. What is the magnitude of its momentum?",
+      "question_images": [
+        {
+          "path": "problem_images/demo/demo-b-02-question.png",
+          "alt_text": "A 4 kg cart moves east at 3 m/s. What is the magnitude of its momentum?"
+        }
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "1.3 kg m/s",
+          "image": {
+            "path": "problem_images/demo/demo-b-02-choice-a.png",
+            "alt_text": "Choice A: 1.3 kg m/s"
+          }
+        },
+        {
+          "label": "B",
+          "text": "7 kg m/s",
+          "image": {
+            "path": "problem_images/demo/demo-b-02-choice-b.png",
+            "alt_text": "Choice B: 7 kg m/s"
+          }
+        },
+        {
+          "label": "C",
+          "text": "12 kg m/s",
+          "image": {
+            "path": "problem_images/demo/demo-b-02-choice-c.png",
+            "alt_text": "Choice C: 12 kg m/s"
+          }
+        },
+        {
+          "label": "D",
+          "text": "24 kg m/s",
+          "image": {
+            "path": "problem_images/demo/demo-b-02-choice-d.png",
+            "alt_text": "Choice D: 24 kg m/s"
+          }
+        },
+        {
+          "label": "E",
+          "text": "36 kg m/s",
+          "image": {
+            "path": "problem_images/demo/demo-b-02-choice-e.png",
+            "alt_text": "Choice E: 36 kg m/s"
+          }
+        }
+      ],
+      "diagrams": [],
+      "correct_answers": [
+        "C"
+      ],
+      "source": {
+        "exam_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "exam_pages": [],
+        "solutions_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "solutions_pages": []
+      },
+      "review_status": "verified",
+      "review_notes": [
+        "Original mechanics question written for the public demonstration."
+      ]
+    },
+    {
+      "id": "demo-b-03",
+      "year": 2099,
+      "exam_version": "Demo B",
+      "problem_number": 3,
+      "question": "A constant 15 N force pushes a box 4 m in the same direction as the force. How much work does the force do?",
+      "question_images": [
+        {
+          "path": "problem_images/demo/demo-b-03-question.png",
+          "alt_text": "A constant 15 N force pushes a box 4 m in the same direction as the force. How much work does the force do?"
+        }
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "3.75 J",
+          "image": {
+            "path": "problem_images/demo/demo-b-03-choice-a.png",
+            "alt_text": "Choice A: 3.75 J"
+          }
+        },
+        {
+          "label": "B",
+          "text": "19 J",
+          "image": {
+            "path": "problem_images/demo/demo-b-03-choice-b.png",
+            "alt_text": "Choice B: 19 J"
+          }
+        },
+        {
+          "label": "C",
+          "text": "45 J",
+          "image": {
+            "path": "problem_images/demo/demo-b-03-choice-c.png",
+            "alt_text": "Choice C: 45 J"
+          }
+        },
+        {
+          "label": "D",
+          "text": "60 J",
+          "image": {
+            "path": "problem_images/demo/demo-b-03-choice-d.png",
+            "alt_text": "Choice D: 60 J"
+          }
+        },
+        {
+          "label": "E",
+          "text": "75 J",
+          "image": {
+            "path": "problem_images/demo/demo-b-03-choice-e.png",
+            "alt_text": "Choice E: 75 J"
+          }
+        }
+      ],
+      "diagrams": [],
+      "correct_answers": [
+        "D"
+      ],
+      "source": {
+        "exam_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "exam_pages": [],
+        "solutions_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "solutions_pages": []
+      },
+      "review_status": "verified",
+      "review_notes": [
+        "Original mechanics question written for the public demonstration."
+      ]
+    },
+    {
+      "id": "demo-b-04",
+      "year": 2099,
+      "exam_version": "Demo B",
+      "problem_number": 4,
+      "question": "What is the kinetic energy of a 2 kg object moving at 5 m/s?",
+      "question_images": [
+        {
+          "path": "problem_images/demo/demo-b-04-question.png",
+          "alt_text": "What is the kinetic energy of a 2 kg object moving at 5 m/s?"
+        }
+      ],
+      "choices": [
+        {
+          "label": "A",
+          "text": "5 J",
+          "image": {
+            "path": "problem_images/demo/demo-b-04-choice-a.png",
+            "alt_text": "Choice A: 5 J"
+          }
+        },
+        {
+          "label": "B",
+          "text": "10 J",
+          "image": {
+            "path": "problem_images/demo/demo-b-04-choice-b.png",
+            "alt_text": "Choice B: 10 J"
+          }
+        },
+        {
+          "label": "C",
+          "text": "25 J",
+          "image": {
+            "path": "problem_images/demo/demo-b-04-choice-c.png",
+            "alt_text": "Choice C: 25 J"
+          }
+        },
+        {
+          "label": "D",
+          "text": "50 J",
+          "image": {
+            "path": "problem_images/demo/demo-b-04-choice-d.png",
+            "alt_text": "Choice D: 50 J"
+          }
+        },
+        {
+          "label": "E",
+          "text": "100 J",
+          "image": {
+            "path": "problem_images/demo/demo-b-04-choice-e.png",
+            "alt_text": "Choice E: 100 J"
+          }
+        }
+      ],
+      "diagrams": [],
+      "correct_answers": [
+        "C"
+      ],
+      "source": {
+        "exam_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "exam_pages": [],
+        "solutions_pdf": "ORIGINAL-DEMO-CONTENT-NO-PDF",
+        "solutions_pages": []
+      },
+      "review_status": "verified",
+      "review_notes": [
+        "Original mechanics question written for the public demonstration."
+      ]
+    }
+  ]
+}

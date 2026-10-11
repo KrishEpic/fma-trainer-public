@@ -1,0 +1,809 @@
+:root {
+  --color-bg: #f5f6f8;
+  --color-surface: #ffffff;
+  --color-text: #172033;
+  --color-text-secondary: #5e6b7d;
+  --color-border: #d8dee8;
+  --color-accent: #2457a7;
+  --color-accent-soft: #eef3fb;
+  --color-correct: #176b3a;
+  --color-correct-soft: #edf8f1;
+  --color-incorrect: #b42318;
+  --color-incorrect-soft: #fff1f0;
+  --color-focus: #1e63d6;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --radius-control: 6px;
+  --radius-surface: 8px;
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f3f6fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page-shell {
+  width: min(760px, calc(100% - 32px));
+  margin: 48px auto;
+}
+
+.eyebrow {
+  margin-bottom: 4px;
+  color: #52617a;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.exam-filter {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.exam-filter label {
+  font-weight: 700;
+}
+
+.exam-filter select {
+  min-width: 180px;
+  padding: 8px 10px;
+  border: 1px solid #bac4d3;
+  border-radius: 7px;
+  background: white;
+  color: inherit;
+  font: inherit;
+}
+
+.problem-card {
+  padding: 32px;
+  border: 1px solid #d9e0ea;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 8px 24px rgb(23 32 51 / 8%);
+}
+
+.problem-meta {
+  margin-top: 0;
+  color: #52617a;
+  font-weight: 600;
+}
+
+.problem-text {
+  font-size: 1.2rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.question-images {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.question-images[hidden] {
+  display: none;
+}
+
+.question-images .problem-image {
+  width: 100%;
+}
+
+.problem-image {
+  display: block;
+  max-width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+}
+
+fieldset {
+  display: grid;
+  gap: 10px;
+  margin: 24px 0;
+  padding: 0;
+  border: 0;
+}
+
+.choice {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px;
+  border: 1px solid #d9e0ea;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.choice-content {
+  display: grid;
+  min-width: 0;
+  gap: 6px;
+}
+
+.choice-text {
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.choice .problem-image {
+  max-height: 300px;
+}
+
+.choice:hover {
+  background: #f7f9fc;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  padding: 10px 18px;
+  border: 1px solid #174ea6;
+  border-radius: 7px;
+  color: white;
+  background: #174ea6;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button.secondary {
+  color: #174ea6;
+  background: white;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.result {
+  min-height: 24px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.result.correct {
+  color: #18743b;
+}
+
+.result.incorrect,
+.result.error {
+  color: #b42318;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 520px) {
+  .page-shell {
+    margin: 24px auto;
+  }
+
+  .problem-card {
+    padding: 20px;
+  }
+}
+
+/* Public trainer foundation. The body class keeps these rules from changing
+   the local review and image-management tools that share this stylesheet. */
+.trainer-page {
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.trainer-page .page-shell {
+  width: min(1040px, calc(100% - 64px));
+  margin: var(--space-6) auto 64px;
+}
+
+.trainer-page .trainer-header {
+  margin-bottom: var(--space-5);
+}
+
+.trainer-page .demo-notice {
+  max-width: 620px;
+  margin: var(--space-2) 0 0;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.trainer-page .eyebrow {
+  margin: 0 0 var(--space-1);
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+}
+
+.trainer-page h1 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 34px;
+}
+
+.trainer-page .exam-filter {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  gap: var(--space-3);
+  align-items: center;
+  margin: 0 0 var(--space-4);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+}
+
+.trainer-page .filter-control {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.trainer-page .exam-filter label {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.trainer-page .exam-filter select {
+  width: 240px;
+  min-width: 0;
+  min-height: 40px;
+  padding: var(--space-2) 36px var(--space-2) var(--space-3);
+  border-color: var(--color-border);
+  border-radius: var(--radius-control);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  font-size: 15px;
+}
+
+.trainer-page #practice-mode {
+  width: 160px;
+}
+
+.trainer-page .progress-utility {
+  display: flex;
+  max-width: 100%;
+  gap: var(--space-4);
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 var(--space-4);
+  color: var(--color-text-secondary);
+}
+
+.trainer-page .progress-utility p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.trainer-page .progress-utility button {
+  flex: 0 0 auto;
+  min-height: 36px;
+  padding: 6px var(--space-3);
+  font-size: 14px;
+}
+
+.trainer-page .progress-details {
+  margin: 0 0 var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-surface);
+  background: var(--color-surface);
+}
+
+.trainer-page .progress-details[hidden] {
+  display: none;
+}
+
+.trainer-page .progress-heading {
+  display: flex;
+  gap: var(--space-5);
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+
+.trainer-page .progress-heading .eyebrow {
+  margin-bottom: var(--space-1);
+}
+
+.trainer-page .progress-heading h2 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.trainer-page .progress-storage-note {
+  max-width: 390px;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.trainer-page .progress-overview {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin: 0 0 var(--space-5);
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.trainer-page .progress-overview div {
+  min-width: 0;
+  padding: 0 var(--space-3);
+  border-right: 1px solid var(--color-border);
+}
+
+.trainer-page .progress-overview div:first-child {
+  padding-left: 0;
+}
+
+.trainer-page .progress-overview div:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.trainer-page .progress-overview dt {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.trainer-page .progress-overview dd {
+  margin: var(--space-1) 0 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.trainer-page .progress-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.trainer-page .progress-table-wrap:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.trainer-page .progress-details table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.trainer-page .progress-details th,
+.trainer-page .progress-details td {
+  padding: 9px var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.trainer-page .progress-details th:first-child,
+.trainer-page .progress-details td:first-child {
+  padding-left: 0;
+  text-align: left;
+}
+
+.trainer-page .progress-details th:last-child,
+.trainer-page .progress-details td:last-child {
+  padding-right: 0;
+}
+
+.trainer-page .progress-details thead th {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.trainer-page .progress-reset {
+  margin-top: var(--space-5);
+}
+
+.trainer-page button.secondary.danger {
+  border-color: var(--color-incorrect);
+  color: var(--color-incorrect);
+  background: var(--color-surface);
+}
+
+.trainer-page #confirm-reset {
+  border-color: var(--color-incorrect);
+  background: var(--color-incorrect);
+}
+
+.trainer-page .reset-confirmation {
+  max-width: 660px;
+  margin-top: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid #efc4c0;
+  border-radius: var(--radius-control);
+  background: var(--color-incorrect-soft);
+}
+
+.trainer-page .reset-confirmation[hidden] {
+  display: none;
+}
+
+.trainer-page .reset-confirmation p {
+  margin: 0 0 var(--space-3);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.trainer-page .reset-confirmation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.trainer-page .progress-status {
+  min-height: 20px;
+  margin: var(--space-2) 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.trainer-page .progress-status:empty {
+  min-height: 0;
+  margin: 0;
+}
+
+.trainer-page .progress-status.success {
+  color: var(--color-correct);
+}
+
+.trainer-page .progress-status.error {
+  color: var(--color-incorrect);
+}
+
+.trainer-page .problem-card {
+  padding: clamp(var(--space-6), 5.4vw, 56px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-surface);
+  background: var(--color-surface);
+  box-shadow: none;
+}
+
+.trainer-page .problem-meta {
+  margin: 0 0 var(--space-5);
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.trainer-page .question-images {
+  gap: var(--space-4);
+  margin: 0 0 var(--space-6);
+}
+
+.trainer-page .question-images .problem-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: initial;
+}
+
+.trainer-page fieldset {
+  gap: var(--space-3);
+  margin: 0 0 var(--space-5);
+}
+
+.trainer-page .choice {
+  width: 100%;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  border-color: var(--color-border);
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+}
+
+.trainer-page .choice:hover {
+  background: var(--color-bg);
+}
+
+.trainer-page .choice input[type="radio"] {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.trainer-page .choice-content {
+  flex: 1 1 auto;
+  width: auto;
+  max-width: 100%;
+  gap: var(--space-2);
+}
+
+.trainer-page .choice .problem-image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: initial;
+}
+
+.trainer-page .choice-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.trainer-page .choice.is-selected {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.trainer-page .choice.is-correct {
+  border-color: var(--color-correct);
+  background: var(--color-correct-soft);
+}
+
+.trainer-page .choice.is-incorrect {
+  border-color: var(--color-incorrect);
+  background: var(--color-incorrect-soft);
+}
+
+.trainer-page .choice-status {
+  flex: 0 0 auto;
+  align-self: center;
+  margin-left: auto;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: right;
+}
+
+.trainer-page .choice.is-correct .choice-status {
+  color: var(--color-correct);
+}
+
+.trainer-page .choice.is-incorrect .choice-status {
+  color: var(--color-incorrect);
+}
+
+.trainer-page .actions {
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.trainer-page button {
+  min-height: 44px;
+  padding: 10px var(--space-4);
+  border-color: var(--color-accent);
+  border-radius: var(--radius-control);
+  color: var(--color-surface);
+  background: var(--color-accent);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.trainer-page button.secondary {
+  color: var(--color-accent);
+  background: var(--color-surface);
+}
+
+.trainer-page .result {
+  overflow-wrap: anywhere;
+  margin: 0 0 var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid currentColor;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.trainer-page .result:empty {
+  display: none;
+}
+
+.trainer-page .result.correct {
+  color: var(--color-correct);
+  background: var(--color-correct-soft);
+}
+
+.trainer-page .result.incorrect,
+.trainer-page .result.error {
+  color: var(--color-incorrect);
+  background: var(--color-incorrect-soft);
+}
+
+.trainer-page .problem-card.is-loading {
+  min-height: 320px;
+}
+
+.trainer-page .problem-card.is-loading .problem-meta {
+  color: var(--color-text-secondary);
+}
+
+.trainer-page select:focus-visible,
+.trainer-page button:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.trainer-page .choice input[type="radio"]:focus-visible {
+  outline: none;
+}
+
+.trainer-page .choice:has(input[type="radio"]:focus-visible) {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+@media (max-width: 900px) {
+  .trainer-page .page-shell {
+    width: calc(100% - 40px);
+    margin: var(--space-5) auto var(--space-7);
+  }
+
+  .trainer-page .problem-card {
+    padding: 36px;
+  }
+
+  .trainer-page .progress-overview {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: var(--space-4);
+  }
+
+  .trainer-page .progress-overview div:nth-child(3) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .trainer-page .page-shell {
+    width: calc(100% - 32px);
+    margin: var(--space-5) auto var(--space-7);
+  }
+
+  .trainer-page .trainer-header {
+    margin-bottom: var(--space-4);
+  }
+
+  .trainer-page .exam-filter {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .trainer-page .filter-control {
+    align-items: stretch;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .trainer-page .exam-filter select,
+  .trainer-page #practice-mode {
+    width: 100%;
+  }
+
+  .trainer-page .progress-utility,
+  .trainer-page .progress-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .trainer-page .progress-utility button {
+    width: 100%;
+  }
+
+  .trainer-page .progress-details {
+    padding: var(--space-4);
+  }
+
+  .trainer-page .progress-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trainer-page .progress-overview div,
+  .trainer-page .progress-overview div:nth-child(3) {
+    padding: 0 var(--space-3);
+    border-right: 1px solid var(--color-border);
+  }
+
+  .trainer-page .progress-overview div:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  .trainer-page .progress-overview div:nth-child(even) {
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .trainer-page .problem-card {
+    padding: var(--space-5);
+  }
+
+  .trainer-page .choice {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    padding: var(--space-3);
+  }
+
+  .trainer-page .choice-status {
+    flex-basis: calc(100% - 28px);
+    max-width: none;
+    margin-left: 28px;
+    text-align: left;
+  }
+
+  .trainer-page .actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .trainer-page .actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .trainer-page .page-shell {
+    width: calc(100% - 24px);
+  }
+
+  .trainer-page .problem-card {
+    padding: var(--space-4);
+  }
+
+  .trainer-page .problem-meta {
+    margin-bottom: var(--space-4);
+  }
+
+  .trainer-page .question-images {
+    margin-bottom: var(--space-5);
+  }
+
+  .trainer-page .choice {
+    gap: 10px;
+    padding: var(--space-3) 10px;
+  }
+}

@@ -4,6 +4,8 @@ I built this web app to make practicing for the F=ma physics exam easier. Instea
 
 The full version of the trainer contains 575 problems from 23 past exam versions. This public repository contains the application code and eight original sample problems. I left out the actual exam questions, images, and PDFs.
 
+<img width="1344" height="1066" alt="Screenshot 2026-10-11 at 1 19 03 PM" src="https://github.com/user-attachments/assets/3dd19ad5-1cdf-4d5a-8dfd-d20fa3ed1fdb" />
+
 ## Features
 
 - **Random practice:** Get a random problem or choose an exam.

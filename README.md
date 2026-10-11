@@ -1,115 +1,82 @@
-# F=ma Trainer — Public Demo
+# F=ma Trainer
 
-A Flask practice application that demonstrates an image-first workflow for
-multiple-choice introductory mechanics problems. This public portfolio edition
-contains eight original demo questions and no official exam content.
+I built this web app to make practicing for the F=ma physics exam easier. Instead of opening old exam PDFs, keeping track of question numbers, and checking answers separately, I wanted a way to practice random problems and see which ones I kept getting wrong.
 
-The complete private trainer supports 575 problems across 23 historical exam
-versions. Those exam questions, answer keys, images, solutions, and PDFs are
-not distributed in this repository.
+The full version of the trainer contains 575 problems from 23 past exam versions. This public repository contains the application code and eight original sample problems. I left out the actual exam questions, images, and PDFs.
 
 ## Features
 
-- Random problem selection and demo-set filtering
-- Five image-rendered answer choices per problem
-- Server-authoritative grading with immediate feedback
-- Random, Unattempted, and Incorrect practice modes
-- Browser-local progress and progress-by-exam summaries
-- Responsive interface with accessible text fallbacks
-- Developer management and review routes disabled by default
+- **Random practice:** Get a random problem or choose an exam.
+- **Practice missed questions:** Switch between Random, Unattempted, and Incorrect modes.
+- **Answer checking:** Submit an answer and immediately see whether it's correct.
+- **Progress tracking:** See how many problems you've attempted, your accuracy, and your progress on each exam.
+- **Image-based questions:** Problems and answer choices are displayed as images, so diagrams and mathematical notation stay intact.
+- **Local storage:** Your progress is saved in your browser without needing an account.
 
-## Architecture
+## How it works
 
-- `app/` contains the Flask application, routes, templates, CSS, and vanilla
-  JavaScript frontend.
-- `data/problems.json` is the validated schema-version-2 demo collection.
-- `app/static/problem_images/demo/` contains reproducible images generated
-  from the original demo questions.
-- `scripts/generate_demo_dataset.py` regenerates the demo JSON and images.
-- `tests/` covers dataset integrity, assets, routes, grading, filters, progress
-  storage, and developer-route isolation.
+The backend uses Python and Flask. Problems are stored in a JSON file, and the frontend uses HTML, CSS, and JavaScript.
 
-Flask serves the page and JSON APIs. The browser chooses eligible problems,
-renders their images, submits answers to Flask, and stores practice progress in
-`localStorage`. Correct answers are not included in problem responses; they are
-returned only after an answer is submitted.
+When you request a problem, Flask sends the question and its five answer choices to the browser without revealing the correct answer. The browser sends your selection back to the server for grading.
 
-## Run locally
+Progress is stored using the browser's `localStorage`, so you can close the page and pick up where you left off.
 
-Python 3.12 is recommended.
+I also wrote a script to generate the sample problems and their images. You can find it at `scripts/generate_demo_dataset.py`.
+
+## Running the app
+
+You'll need Python 3.12.
+
+Clone the repository and install the dependencies:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/KrishEpic/fma-trainer-public.git
 cd fma-trainer-public
+
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python app.py
 ```
 
-Open <http://127.0.0.1:5000>. Flask's built-in server is for local development,
-not public deployment.
+Then open http://127.0.0.1:5000 in your browser.
 
-On Windows PowerShell, activate the environment with:
-
-```powershell
-.venv\Scripts\Activate.ps1
-```
+For Windows PowerShell, use `.venv\Scripts\Activate.ps1` to activate the virtual environment.
 
 ## Tests
+
+Run the tests with:
 
 ```bash
 python -m pytest
 ```
 
-To regenerate the original demo dataset and all 48 demo images:
+To regenerate the eight demo problems and their images:
 
 ```bash
 python scripts/generate_demo_dataset.py
 ```
 
-## Production command
+## Deploying
 
-The application exposes a Flask factory and includes Gunicorn:
+The app can also run with Gunicorn:
 
 ```bash
 gunicorn --bind 0.0.0.0:$PORT 'app:create_app()'
 ```
 
-Leave `FMA_MANAGEMENT_MODE` unset or set it to `0` publicly. `/manage` and
-`/review` are local developer tools and must not be enabled on a public site.
-Normal public practice requires no server filesystem writes.
+The repository includes developer tools for reviewing problem images, but these are disabled by default. Keep `FMA_MANAGEMENT_MODE` unset or set to `0` on public deployments.
 
-For local image-management development only, start with:
+## About this public version
 
-```bash
-FMA_MANAGEMENT_MODE=1 python app.py
-```
+The eight sample questions are original introductory mechanics problems, divided into two fictional exam sets for testing the filtering system.
 
-The image manager can inspect the included demo collection. The retained import
-review code expects separate local review data, which is intentionally not part
-of this public demonstration.
+The full trainer uses historical F=ma exam material, which is not included here. You can find official past exams on the [AAPT website](https://www.aapt.org/physicsteam/PT-exams.cfm).
 
-## Demo limitations
+Progress is saved only in your current browser. It doesn't sync across devices.
 
-- The included questions are deliberately small, original examples rather
-  than historical competition problems.
-- Progress stays in the current browser, requires no account, does not sync
-  between devices, and is removed when site data is cleared.
-- Source fields in the JSON use `ORIGINAL-DEMO-CONTENT-NO-PDF` to satisfy the
-  shared schema without pretending that a source PDF exists.
-
-## Attribution and independence
-
-F=ma is part of the U.S. Physics Team selection process organized by the
-American Association of Physics Teachers. Official historical materials are
-available from the [AAPT past-exams archive](https://www.aapt.org/physicsteam/PT-exams.cfm).
-
-This is an independent, unofficial project. It is not affiliated with or
-endorsed by AAPT. No AAPT questions, answer keys, exam images, solutions, or
-PDFs are included here.
+This is an independent project and is not affiliated with or endorsed by the American Association of Physics Teachers.
 
 ## License
 
-The original source code is available under the [MIT License](LICENSE). The
-license does not grant rights to third-party names, marks, or materials.
+The original source code is licensed under the [MIT License](LICENSE). Third-party material and trademarks are not covered.
